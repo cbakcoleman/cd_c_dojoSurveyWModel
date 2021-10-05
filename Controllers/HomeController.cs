@@ -18,9 +18,22 @@ namespace cd_c_dojoSurveyWModel.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet("")]
+        public ViewResult Index()
         {
             return View();
+        }
+
+        [HttpPost("survey")]
+        public IActionResult Submission(Survey survey)
+        {
+            return View("SurveyInfo", survey);
+        }
+
+        [HttpGet("survey/result")]
+        public ViewResult SurveyInfo()
+        {
+            return View("SurveyInfo");
         }
 
         public IActionResult Privacy()

@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+<form action="/survey" method="post">
+    <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" class="form-control">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <label for="location">Dojo Location:</label>
+        <select class="form-control" name="location">
+            <option disabled selected hidden>--Select a Location--</option>
+            <option name="bellevue" value="bellevue">Bellevue, WA</option>
+            <option name="boise" value="boise">Boise, ID</option>
+            <option name="chicago" value="chicago">Chicago, IL</option>
+            <option name="los_angeles" value="los angeles">Los Angeles, CA</option>
+            <option name="silicon_valley" value="silicon valley">Silicon Valley, CA</option>
+        </select>
+
+        <label for="language">Favorite Language:</label>
+        <select class="form-control" name="language">
+            <option disabled selected hidden>--Select a Language--</option>
+            <option name="html" value="html">HTML</option>
+            <option name="css" value="css">CSS</option>
+            <option name="javascript" value="javascript">JavaScript</option>
+            <option name="python" value="python">Python</option>
+            <option name="c_sharp" value="c#">C#</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea class="form-control" name="comments"  cols="30" rows="5"></textarea>
+        
+        <input type="submit" class="btn btn-info mt-2">
+
+    </form>
